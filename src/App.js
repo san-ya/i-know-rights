@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import {NavBar, HumanRights, WomenRights, ConsumerRights, LandPage, Footer } from '../Components'
+
 
 function App() {
   return (
