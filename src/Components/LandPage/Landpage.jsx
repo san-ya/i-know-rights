@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Consumer() {
+export default function Landpage() {
     return (
         <div>
-            
+            Landpage
         </div>
     )
 }

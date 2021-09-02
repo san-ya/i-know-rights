@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Landpage() {
+export default function ConsumerRights() {
     return (
         <div>
             
