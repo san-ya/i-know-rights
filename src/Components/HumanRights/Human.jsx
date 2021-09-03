@@ -1,4 +1,4 @@
-import { makeStyles, Collapse } from "@material-ui/core";
+import { makeStyles, Collapse, Typography } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
@@ -7,7 +7,7 @@ import humanrights1 from "../../Assests/humanRights1.jpg";
 import humanrights2 from "../../Assests/humanRights2.jpg";
 import humanrights3 from "../../Assests/humanRights3.jpg";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   heading: {
     fontSize: "4rem",
     fontWeight: "800",
@@ -32,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
     display: "flex",
     justifyContent: "center",
-    overflow: 'hidden'
   },
   img: {
     width: "18rem",
@@ -45,7 +44,19 @@ const useStyles = makeStyles((theme) => ({
       transform: 'scale(1.1)'
     }
   },
+  uphold : {
+    backgroundColor: '#293039',
+    height: '80vh',
+    margin: '4rem'
+  },
+  upholdText : {
+    width: '50%',
+    color: 'white',
+    
+  }
 }));
+
+
 
 export default function HumanRights() {
   const classes = useStyles();
@@ -82,11 +93,15 @@ export default function HumanRights() {
         </div>
         <div className={classes.underLine}></div>
       </div>
+      <div className={classes.uphold}>
       <Collapse
         in={checked}
         {...(checked ? { timeout: 1000 } : {})}
         collapsedHeight={50}
-      ></Collapse>
+      >
+        <Typography className={classes.upholdText} variant="h2">Why upholding these rights is important?</Typography>
+      </Collapse>
+      </div>
     </>
   );
 }
