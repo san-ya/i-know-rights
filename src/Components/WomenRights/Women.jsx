@@ -188,24 +188,6 @@ export default function HumanRights() {
           </Row>
         </Container>
       </div>
-
-      <footer id="footer">
-        <p>
-          <a href="twitter.com" class="links">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="instagram.com" class="links">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="facebook.com" class="links">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="gmail.com" class="links">
-            <i class="far fa-envelope"></i>
-          </a>
-        </p>
-        <p class="copyright">Copyright © {year} I-Know-Rights</p>
-      </footer>
     </>
   );
 }

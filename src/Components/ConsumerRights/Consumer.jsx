@@ -2,8 +2,8 @@ import { makeStyles, Collapse } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-import "./consumer.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import "./consumer.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
     display: "flex",
     justifyContent: "center",
-    overflow: 'hidden'
+    overflow: "hidden",
   },
   img: {
     width: "22rem",
@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "0",
     margin: "1rem",
     border: "0.3rem solid #fff",
-    transition: 'all 0.5s ease',
-    '&:hover':{
-      transform: 'scale(1.1)'
-    }
+    transition: "all 0.5s ease",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
   },
 }));
 
@@ -58,13 +58,22 @@ export default function ConsumerRights() {
         <div className={classes.images}>
           <Row>
             <Col style={{ display: "inline-block" }}>
-              <Image src="https://images.unsplash.com/photo-1521566652839-697aa473761a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" className={classes.img} /> 
+              <Image
+                src="https://images.unsplash.com/photo-1521566652839-697aa473761a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                className={classes.img}
+              />
             </Col>
             <Col style={{ display: "inline-block" }}>
-              <Image src="https://images.unsplash.com/photo-1571597438372-540dd352bf41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" className={classes.img} />
+              <Image
+                src="https://images.unsplash.com/photo-1571597438372-540dd352bf41?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
+                className={classes.img}
+              />
             </Col>
             <Col style={{ display: "inline-block" }}>
-              <Image src="https://images.unsplash.com/photo-1580250729659-e5cb6c5c110d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" className={classes.img} />
+              <Image
+                src="https://images.unsplash.com/photo-1580250729659-e5cb6c5c110d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                className={classes.img}
+              />
             </Col>
           </Row>
         </div>
@@ -80,11 +89,7 @@ export default function ConsumerRights() {
         </div>
         <div className={classes.underLine}></div>
       </div>
-      <Collapse
-        in={checked}
-        {...(checked ? { timeout: 1000 } : {})}
-      ></Collapse>
+      <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}></Collapse>
     </>
   );
 }
-
