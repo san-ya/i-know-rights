@@ -145,7 +145,7 @@ export default function HumanRights() {
       <Grid container spacing={3} className={classes.cards}>
         
         {cardDetails.map((card) => (
-          <Grid card key={card.id} lg={3} md={6} sm={12}>
+          <Grid card key={card.id} lg={4} md={6} sm={12} spacing={2}>
             <RightsCard card={card} />
           </Grid>
         ))}
