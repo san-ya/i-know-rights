@@ -1,4 +1,4 @@
-import { makeStyles, Collapse } from "@material-ui/core";
+import { makeStyles, Collapse, Typography, Grid } from "@material-ui/core";
 import { Container, Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
@@ -6,6 +6,8 @@ import "./Women.css";
 import Cards from "./Cards";
 import "bootstrap/dist/css/bootstrap.min.css";
 import contactImage from "./Contacts.jpeg";
+import justice from "../../Assests/balance.png";
+import cardDetails from "./womenRightCards";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   underLine: {
     borderTop: "0.4rem solid #293039",
     width: "50%",
-    height: "2rem",
+    height: "5rem",
     margin: "auto",
     marginTop: "0.5rem",
     display: "flex",
@@ -68,6 +70,44 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+  uphold: {
+    backgroundColor: "#293039",
+    height: "80%",
+    width: "90%",
+    display: "flex",
+    justifyContent: "center",
+    margin: "5rem auto",
+  },
+  upholdText: {
+    color: "white",
+    fontWeight: "800",
+    margin: "2rem",
+    display: "inline-block",
+  },
+  underLine4: {
+    borderTop: "0.4rem solid #00C2CB",
+    width: "85%",
+    marginLeft: "1.5rem",
+    marginTop: "0.5rem",
+    display: "inline-block",
+  },
+  slides: {
+    display: "inline-block",
+  },
+  slide: {
+    height: "70vh",
+    width: "40vw",
+    backgroundColor: "#00C2CB",
+    display: "inline-block",
+    margin: "2rem 0rem",
+    overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+      margin: "2rem auto",
+      display: "flex",
+      justifyContent: "center",
+      width: "80vw",
+    },
+  },
 }));
 
 export default function HumanRights() {
@@ -78,6 +118,17 @@ export default function HumanRights() {
   }, []);
 
   const year = new Date().getFullYear();
+
+  function createCard(card) {
+    return (
+      <Cards
+        key={card.id}
+        title={card.title}
+        content={card.content}
+        image={card.image}
+      />
+    );
+  }
 
   return (
     <>
@@ -118,37 +169,32 @@ export default function HumanRights() {
       </div>
       <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}></Collapse>
 
+      <Grid container spacing={2} className={classes.uphold}>
+        <Grid md={7} sm={12} className={classes.slides}>
+          <Typography className={classes.upholdText} variant="h3">
+            Why upholding these rights is important?
+          </Typography>
+          <div className={classes.underLine4}></div>
+          <p>Hello</p>
+        </Grid>
+        <Grid md={5} sm={12} className={classes.slides}>
+          <div className={classes.slide}>
+            <Image
+              src={justice}
+              alt="justice"
+              style={{ height: "70%", margin: "9% auto", display: "flex" }}
+            />
+          </div>
+        </Grid>
+      </Grid>
+
       <div className="rights">
         <h1>WOMEN RIGHTS</h1>
         <div className={classes.underLine2}></div>
 
         <div>
           <div class="container1">
-            <ul class="cards">
-              <Cards
-                title="Right to Equal Pay"
-                image="https://cdn-icons-png.flaticon.com/512/3037/3037156.png"
-                content="According to the provisions listed under the Equal Remuneration Act
-                , one cannot be discriminated on the basis of sex when it comes to salary,
-                 pay or wages.Working women have the right to draw an equal salary, as compared
-                 to men"
-              />
-              <Cards
-                title="Right against Domestic Violence"
-                image="https://img-premium.flaticon.com/png/512/2517/premium/2517176.png?token=exp=1630771227~hmac=733be050dc8617c8e8240ef39e3c7aff"
-                content="This law looks to protect women from domestic violence (including verbal, economic, emotional and sexual) by the hands of any male relative.
-                The accused shall be punished with a non-bailable imprisonment for a term
-                 which may extend to three years and shall also be liable to fine."
-              />
-              <Cards />
-            </ul>
-          </div>
-          <div class="container1">
-            <ul class="cards">
-              <Cards />
-              <Cards />
-              <Cards />
-            </ul>
+            <ul class="cards">{cardDetails.map(createCard)}</ul>
           </div>
         </div>
       </div>
