@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   images: {
     padding: "2rem",
+
     display: "flex",
     justifyContent: "center",
   },
