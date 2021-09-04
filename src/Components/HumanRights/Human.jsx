@@ -1,4 +1,4 @@
-import { makeStyles, Collapse, Typography } from "@material-ui/core";
+import { makeStyles, Collapse, Typography, Grid } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
@@ -6,8 +6,11 @@ import "./humanR.css";
 import humanrights1 from "../../Assests/humanRights1.jpg";
 import humanrights2 from "../../Assests/humanRights2.jpg";
 import humanrights3 from "../../Assests/humanRights3.jpg";
+import justice from "../../Assests/balance.png";
+import cardDetails from "./cardDetails";
+import RightsCard from './RightsCard';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   heading: {
     fontSize: "4rem",
     fontWeight: "800",
@@ -39,24 +42,53 @@ const useStyles = makeStyles(() => ({
     padding: "0",
     margin: "1rem",
     border: "0.3rem solid #fff",
-    transition: 'all 0.5s ease',
-    '&:hover':{
-      transform: 'scale(1.1)'
-    }
+    transition: "all 0.5s ease",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
   },
-  uphold : {
-    backgroundColor: '#293039',
-    height: '80vh',
-    margin: '4rem'
+  uphold: {
+    backgroundColor: "#293039",
+    height: "80%",
+    width: "90%",
+    display: "flex",
+    justifyContent: "center",
+    margin: "3rem auto",
   },
-  upholdText : {
-    width: '50%',
-    color: 'white',
-    
-  }
+  upholdText: {
+    color: "white",
+    fontWeight: "800",
+    margin: "2rem",
+    display: "inline-block",
+  },
+  underLine2: {
+    borderTop: "0.4rem solid #00C2CB",
+    width: "85%",
+    marginLeft: "1.5rem",
+    marginTop: "0.5rem",
+    display: "inline-block",
+  },
+  slides: {
+    display: "inline-block",
+  },
+  slide: {
+    height: "70vh",
+    width: "40vw",
+    backgroundColor: "#00C2CB",
+    display: "inline-block",
+    margin: "2rem 0rem",
+    overflow: "hidden",
+    [theme.breakpoints.down("sm")]: {
+      margin: "2rem auto",
+      display: "flex",
+      justifyContent: "center",
+      width: "80vw",
+    },
+  },
+  cards: {
+    width: "100%",
+  },
 }));
-
-
 
 export default function HumanRights() {
   const classes = useStyles();
@@ -93,15 +125,31 @@ export default function HumanRights() {
         </div>
         <div className={classes.underLine}></div>
       </div>
-      <div className={classes.uphold}>
-      <Collapse
-        in={checked}
-        {...(checked ? { timeout: 1000 } : {})}
-        collapsedHeight={50}
-      >
-        <Typography className={classes.upholdText} variant="h2">Why upholding these rights is important?</Typography>
-      </Collapse>
-      </div>
+      <Grid container spacing={2} className={classes.uphold}>
+        <Grid md={7} sm={12} className={classes.slides}>
+          <Typography className={classes.upholdText} variant="h3">
+            Why upholding these rights is important?
+          </Typography>
+          <div className={classes.underLine2}></div>
+        </Grid>
+        <Grid md={5} sm={12} className={classes.slides}>
+          <div className={classes.slide}>
+            <Image
+              src={justice}
+              alt="justice"
+              style={{ height: "70%", margin: "9% auto", display: "flex" }}
+            />
+          </div>
+        </Grid>
+      </Grid>
+      <Grid container spacing={3} className={classes.cards}>
+        
+        {cardDetails.map((card) => (
+          <Grid card key={card.id} lg={3} md={6} sm={12}>
+            <RightsCard card={card} />
+          </Grid>
+        ))}
+      </Grid>
     </>
   );
 }
