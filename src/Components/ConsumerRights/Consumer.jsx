@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HumanRights() {
+export default function ConsumerRights() {
   const classes = useStyles();
   const [checked, setChecked] = useState(false);
   useEffect(() => {
