@@ -1,9 +1,12 @@
 import { makeStyles, Collapse } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
+import justice from "../../Assests/balance.png";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-// import "./consumer.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Consumer.css";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -20,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   underLine: {
     borderTop: "0.5rem solid #293039",
     width: "50%",
-    height: "2rem",
+    height: "5rem",
     margin: "auto",
     marginTop: "0.5rem",
     display: "flex",
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "22rem",
     height: "18rem",
-    padding: "0",
+    padding: "1",
     margin: "1rem",
     border: "0.3rem solid #fff",
     transition: "all 0.5s ease",
@@ -89,7 +92,32 @@ export default function ConsumerRights() {
         </div>
         <div className={classes.underLine}></div>
       </div>
+<<<<<<< HEAD
       <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}></Collapse>
+=======
+      <Collapse
+        in={checked}
+        {...(checked ? { timeout: 1000 } : {})}
+      ></Collapse>
+
+<Grid container spacing={2} className={classes.uphold}>
+        <Grid md={7} sm={12} className={classes.slides}>
+          <Typography className={classes.upholdText} variant="h3">
+            Why upholding these rights is important?
+          </Typography>
+          <div className={classes.underLine2}></div>
+        </Grid>
+        <Grid md={5} sm={12} className={classes.slides}>
+          <div className={classes.slide}>
+            <Image
+              src={justice}
+              alt="justice"
+              style={{ height: "70%", margin: "9% auto", display: "flex" }}
+            />
+          </div>
+        </Grid>
+      </Grid>
+>>>>>>> c8eeae77b7aae7c2b82192d2091bf5bb5ce824f9
     </>
   );
 }
