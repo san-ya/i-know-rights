@@ -1,0 +1,14 @@
+.contact {
+    background-image: linear-gradient(90deg, #293039 50%, #97f1ea 50%);
+    width: 100%;
+    height: 90vh;
+  }
+  .contactCard {
+    background-color: white;
+    height: 80%;
+    width: 50vw;
+    position: relative;
+    top: 63px;
+    right: 100px;
+    text-align: center;
+  }

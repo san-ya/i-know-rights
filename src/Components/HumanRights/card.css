@@ -1,9 +1,11 @@
 .cards__item {
   height: 70vh;
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
 }
 
 .card {
+  width: 90%;
+  margin: auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -22,13 +24,13 @@
   pointer-events: none;
 }
 .card:nth-child(1) {
-  background-image: linear-gradient(45deg, #3503ad, #f7308c);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 .card:nth-child(2) {
-  background-image: linear-gradient(45deg, #ccff00, #09afff);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 .card:nth-child(3) {
-  background-image: linear-gradient(45deg, #e91e63, #ffeb3b);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 
 .card__frame {
@@ -96,13 +98,13 @@
   content: none;
 }
 .card:nth-child(1) .card__overlay {
-  background-image: linear-gradient(45deg, #3503ad, #f7308c);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 .card:nth-child(2) .card__overlay {
-  background-image: linear-gradient(45deg, #ccff00, #09afff);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 .card:nth-child(3) .card__overlay {
-  background-image: linear-gradient(45deg, #e91e63, #ffeb3b);
+  background-image: linear-gradient(45deg, #66ffcc, #0099cc);
 }
 
 .card__content {

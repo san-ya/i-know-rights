@@ -9,6 +9,7 @@ import humanrights3 from "../../Assests/humanRights3.jpg";
 import justice from "../../Assests/balance.png";
 import cardDetails from "./cardDetails";
 import RightsCard from './RightsCard';
+import Contact from "../Contact/Contact";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -86,8 +87,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   cards: {
-    width: "100%",
+    width: "80%",
+    margin: "1rem auto",
   },
+  card: {
+    margin: '5rem auto'
+  }
 }));
 
 export default function HumanRights() {
@@ -142,13 +147,16 @@ export default function HumanRights() {
           </div>
         </Grid>
       </Grid>
+      <div style={{backgroundColor: '#e3fdfd'}}>
       <Grid container className={classes.cards}>
         {cardDetails.map((card) => (
-          <Grid card key={card.id} lg={4} md={6} sm={12} spacing={2}>
+          <Grid card key={card.id} lg={4} md={6} className={classes.card}>
             <RightsCard card={card} />
           </Grid>
         ))}
       </Grid>
+      </div>
+      <Contact/>
     </>
   );
 }

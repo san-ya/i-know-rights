@@ -1,8 +1,9 @@
+
 const cardDetails = [
     {
         id: 1,
         heading: 'Heading 1',
-        img: 'https://image.flaticon.com/icons/svg/1336/1336494.svg',
+        img: '../../Assests/humanRights1',
         details: "Dignissimos ipsam culpa vitae vel hic harum omnis doloremque debitis laudantium neque quos iure voluptates quidem ratione esse modi, rerum illum facere eius accusantium dolorem incidunt beatae officiis voluptatem? Nostrum."
     },
     {
