@@ -2,7 +2,7 @@ import { makeStyles, Collapse } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-import "./consumer.css";
+import "./Consumer.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   underLine: {
     borderTop: "0.5rem solid #293039",
     width: "50%",
-    height: "2rem",
+    height: "5rem",
     margin: "auto",
     marginTop: "0.5rem",
     display: "flex",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "22rem",
     height: "18rem",
-    padding: "0",
+    padding: "1",
     margin: "1rem",
     border: "0.3rem solid #fff",
     transition: 'all 0.5s ease',
