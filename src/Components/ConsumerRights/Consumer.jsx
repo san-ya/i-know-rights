@@ -2,7 +2,11 @@ import { makeStyles, Collapse } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
+<<<<<<< HEAD
 import "./Consumer.css";
+=======
+// import "./consumer.css";
+>>>>>>> 41adc4150110637bc7f8ae57246e26f655ea5ab5
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const useStyles = makeStyles((theme) => ({
