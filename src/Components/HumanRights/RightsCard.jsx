@@ -10,7 +10,7 @@ export default function RightsCard({ card }) {
           <Image
             src={card.img}
             alt=""
-            width="120"
+            width="100"
           />
         </div>
         <h2 class="card__title">{card.heading}</h2>

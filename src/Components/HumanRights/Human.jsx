@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   underLine: {
     borderTop: "0.4rem solid #293039",
     width: "50%",
-    height: "2rem",
+    height: "5rem",
     margin: "auto",
     marginTop: "0.5rem",
     display: "flex",
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     display: "flex",
     justifyContent: "center",
-    margin: "3rem auto",
+    margin: "5rem auto",
   },
   upholdText: {
     color: "white",
@@ -142,8 +142,7 @@ export default function HumanRights() {
           </div>
         </Grid>
       </Grid>
-      <Grid container spacing={3} className={classes.cards}>
-        
+      <Grid container className={classes.cards}>
         {cardDetails.map((card) => (
           <Grid card key={card.id} lg={4} md={6} sm={12} spacing={2}>
             <RightsCard card={card} />

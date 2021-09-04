@@ -1,5 +1,6 @@
 .cards__item {
-  height: 400px;
+  height: 70vh;
+  margin: 1rem 2rem;
 }
 
 .card {
