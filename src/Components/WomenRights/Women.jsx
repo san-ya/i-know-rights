@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
   underLine4: {
     borderTop: "0.4rem solid #00C2CB",
-    width: "85%",
+    width: "97%",
     marginLeft: "1.5rem",
     marginTop: "0.5rem",
     display: "inline-block",
@@ -96,10 +96,10 @@ const useStyles = makeStyles((theme) => ({
   },
   slide: {
     height: "70vh",
-    width: "40vw",
+    width: "37vw",
     backgroundColor: "#00C2CB",
     display: "inline-block",
-    margin: "2rem 0rem",
+    margin: "4.5rem 0 2rem 3rem",
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       margin: "2rem auto",
@@ -175,14 +175,36 @@ export default function HumanRights() {
             Why upholding these rights is important?
           </Typography>
           <div className={classes.underLine4}></div>
-          <p>Hello</p>
+          <p
+            style={{
+              color: "white",
+              justifyContent: "space-evenly",
+              margin: "1rem 0 1rem 2rem",
+              padding: "1rem 0 1.5rem",
+              fontSize: "1.5rem",
+              fontWeight: "300",
+              textAlign: "justify",
+            }}
+          >
+            Millions of women around the world experience compounded forms of
+            discrimination — due to factors such as their age, ethnicity,
+            disability, or socio-economic status — in addition to their gender.
+            Effectively ensuring women’s human rights requires, firstly, a
+            comprehensive understanding of the social structures and power
+            relations that frame not only laws and politics but also the
+            economy, social dynamics and family and community life. Harmful
+            gender stereotypes must be dismantled, so that women are no longer
+            viewed in the light of what women “should” do and are instead seen
+            for who they are: unique individuals, with their own needs and
+            desires.
+          </p>
         </Grid>
         <Grid md={5} sm={12} className={classes.slides}>
           <div className={classes.slide}>
             <Image
               src={justice}
               alt="justice"
-              style={{ height: "70%", margin: "9% auto", display: "flex" }}
+              style={{ height: "70%", margin: "10% auto", display: "flex" }}
             />
           </div>
         </Grid>

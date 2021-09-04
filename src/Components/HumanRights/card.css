@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: center;
   background-color: #000000;
+  width: 90%;
+  margin: auto;
 }
 .card::before {
   content: "";
@@ -83,7 +85,8 @@
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.card__overlay:hover, .card__overlay:focus {
+.card__overlay:hover,
+.card__overlay:focus {
   bottom: 0;
   right: 0;
   width: 100%;
@@ -92,7 +95,8 @@
   border-radius: 0;
   opacity: 0.9;
 }
-.card__overlay:hover::before, .card__overlay:focus::before {
+.card__overlay:hover::before,
+.card__overlay:focus::before {
   content: none;
 }
 .card:nth-child(1) .card__overlay {

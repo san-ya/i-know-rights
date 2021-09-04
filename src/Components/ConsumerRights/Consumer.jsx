@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import "./Consumer.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -92,15 +92,9 @@ export default function ConsumerRights() {
         </div>
         <div className={classes.underLine}></div>
       </div>
-<<<<<<< HEAD
       <Collapse in={checked} {...(checked ? { timeout: 1000 } : {})}></Collapse>
-=======
-      <Collapse
-        in={checked}
-        {...(checked ? { timeout: 1000 } : {})}
-      ></Collapse>
 
-<Grid container spacing={2} className={classes.uphold}>
+      <Grid container spacing={2} className={classes.uphold}>
         <Grid md={7} sm={12} className={classes.slides}>
           <Typography className={classes.upholdText} variant="h3">
             Why upholding these rights is important?
@@ -117,7 +111,6 @@ export default function ConsumerRights() {
           </div>
         </Grid>
       </Grid>
->>>>>>> c8eeae77b7aae7c2b82192d2091bf5bb5ce824f9
     </>
   );
 }

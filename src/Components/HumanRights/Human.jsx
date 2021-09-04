@@ -8,7 +8,7 @@ import humanrights2 from "../../Assests/humanRights2.jpg";
 import humanrights3 from "../../Assests/humanRights3.jpg";
 import justice from "../../Assests/balance.png";
 import cardDetails from "./cardDetails";
-import RightsCard from './RightsCard';
+import RightsCard from "./RightsCard";
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   images: {
     padding: "2rem",
-    
+
     display: "flex",
     justifyContent: "center",
   },

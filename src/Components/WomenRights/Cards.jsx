@@ -12,7 +12,6 @@ function Card(props) {
         </div>
         <div class="card__overlay"></div>
         <div class="card__content">
-          <h4>{props.title}</h4>
           <p style={{ fontWeight: "600" }}>{props.content}</p>
         </div>
       </li>
