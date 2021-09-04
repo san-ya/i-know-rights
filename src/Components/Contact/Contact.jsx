@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+  slide: {
+      [theme.breakpoints.down('sm')]: {
+          backgroundColor: 'pink'
+      }
+  }
 }));
 
 export default function Contact() {
@@ -31,7 +36,7 @@ export default function Contact() {
               />
             </Col>
 
-            <Col md={6} className={classes.slide}>
+            <Col md={6}>
               <div className="contactCard">
                 <h2
                   style={{
