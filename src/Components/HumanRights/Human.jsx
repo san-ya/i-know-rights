@@ -1,6 +1,6 @@
-import { makeStyles, Collapse, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 import { Col, Image, Row } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import "./humanR.css";
 import humanrights1 from "../../Assests/humanRights1.jpg";
@@ -92,10 +92,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HumanRights() {
   const classes = useStyles();
-  const [checked, setChecked] = useState(false);
-  useEffect(() => {
-    setChecked(true);
-  }, []);
+  // // const [setChecked] = useState(false);
+  // // useEffect(() => {
+  // //   setChecked(true);
+  // }, []);
 
   return (
     <>
