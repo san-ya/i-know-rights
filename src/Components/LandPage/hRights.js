@@ -1,5 +1,5 @@
 import React from 'react';
-import wRights from '../Assets/womenRights.png';
+import wRights from '../Assests/womenRights.png';
 import './WRights.css';
 
 function Card() {
