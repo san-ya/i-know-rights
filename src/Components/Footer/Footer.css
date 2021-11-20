@@ -1,0 +1,36 @@
+footer {
+    text-align: center;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+    vertical-align: bottom;
+    background-color: #293039;
+}
+
+.copyright {
+    color: white;
+    margin-bottom: 70px;
+    font-family: 'Lato', sans-serif;
+}
+
+.socMedia {
+    display: inline-block;
+    font-size: 20px;
+    color: black;
+    margin-top: 17vh;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 7vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.socMedia a {
+    padding: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.socMedia a:hover {
+    color: #00C2CB;
+}

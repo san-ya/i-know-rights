@@ -1,0 +1,30 @@
+.body1 {
+    display: flex;
+}
+
+.header {
+    overflow: hidden;
+    display: flex;
+    background-color: #293039;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    justify-content: space-between;
+    z-index: 100;
+    height: 10vh;
+}
+
+.headerContents a {
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    margin: 2px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 5vh;
+    letter-spacing: 1.2px;
+    padding: 5px 0;
+}
+
+.headerContents a:hover {
+    color: #00C2CB !important;
+}
